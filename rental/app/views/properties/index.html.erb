@@ -1,0 +1,7 @@
+<h1>This is Property page</h1>
+<div class="show">
+<% @properties.each do |property| %>
+<p><%= property.adress%></p>
+<%= link_to image_tag(property.photos, :class => 'thumb'), property %>
+<% end %>
+</div>

@@ -1,0 +1,27 @@
+<%= form_for @properties do |f| %>
+<%= f.label :adress %>
+<%= f.text_field :adress, :required => true %>
+<%= f.label :suburb%>
+<%= f.text_field :suburb, :required => true %>
+<%= f.label :postcode %>
+<%= f.text_field :postcode, :required => true %>
+<%= f.label :rooms %>
+<%= f.text_field :rooms %>
+<%= f.label :livingrooms %>
+<%= f.text_field :livingrooms %>
+<%= f.label :bathrooms %>
+<%= f.text_field :bathrooms %>
+<%= f.label :toilets %>
+<%= f.text_field :toilets %>
+<%= f.label :garage %>
+<%= f.text_field :garage %>
+<%= f.label :pspace %>
+<%= f.text_field :pspace %>
+<%= f.label :rent %>
+<%= f.label :rent %>
+<%= f.label :photos %>
+<%= f.url_field :photos %>
+<%= f.label :agent_ids %>
+<%= collection_check_boxes :property, :agent_ids, Agent.all, :id, :name %>
+<%= f.submit %>
+<% end %>

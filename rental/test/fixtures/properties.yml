@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  adress: MyText
+  suburb: MyText
+  postcode: 1
+  rooms: 1
+  livingrooms: 1
+  bathrooms: 1
+  toilets: 1
+  garage: 1
+  pspace: 1
+  rent: 1
+  photos: MyText
+
+two:
+  adress: MyText
+  suburb: MyText
+  postcode: 1
+  rooms: 1
+  livingrooms: 1
+  bathrooms: 1
+  toilets: 1
+  garage: 1
+  pspace: 1
+  rent: 1
+  photos: MyText

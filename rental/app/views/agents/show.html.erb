@@ -1,0 +1,13 @@
+<h1><%= @agents.name %> <%= @agents.surname %></h1>
+
+<%= image_tag @agents.image, :class => 'fearture' if @agents.image.present? %>
+<ul>
+  <li>Mobile Number: <%= @agents.mobile %></li>
+  <li>Phone Number: <%= @agents.phone %></li>
+  <li>Email: <%= @agents.email %></li>
+</ul>
+
+<% if @current_user.admin? %>
+<%= link_to 'Edit Agents', edit_agent_path %>
+<%= link_to 'Delete Agents', @agents, :method => 'delete', :data =>{ :confirm => 'Are you sure?'} %>
+<% end %>
