@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   #create user
-  resources :users, :only => [:new, :create, :edit, :update]
+  resources :users, :only => [:new, :create, :edit, :update, :show]
 
   root :to => 'properties#index'
   #login
@@ -10,7 +10,5 @@ Rails.application.routes.draw do
 
   resources :agents
   resources :properties
-
-  # resources :agentspropertys
 
 end

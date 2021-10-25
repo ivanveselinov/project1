@@ -1,17 +1,34 @@
+<div class="formformat">
+
+
 <%= form_for @agents do |f|  %>
+<br>
 <%= f.label :name %>
 <%= f.text_field :name %>
+</br>
+<br>
 <%= f.label :surname %>
 <%= f.text_field :surname %>
+</br>
+<br>
 <%= f.label :mobile %>
 <%= f.text_field :mobile %>
+</br>
+<br>
 <%= f.label :phone %>
 <%= f.text_field :phone %>
+</br>
+<br>
 <%= f.label :email %>
 <%= f.text_field :email %>
+</br>
+<br>
 <%= f.label :image %>
 <%= f.url_field :image %>
-<%= f.label :property_id %>
-
+</br>
+<br>
 <%= f.submit %>
+</br>
 <% end %>
+
+</div>

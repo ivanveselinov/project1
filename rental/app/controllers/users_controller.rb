@@ -13,8 +13,18 @@ class UsersController < ApplicationController
 end
 end
 
+def edit
+  @user = User.find params[:id]
+end
+
+def update
+  users = User.find params[:id]
+  users.update user_params
+  redirect_to user_path
+end
+
   private
   def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation)
+    params.require(:user).permit(:email, :password, :password_confirmation, :name, :surname, :phone, :mobile, :image)
   end
 end

@@ -1,5 +1,6 @@
 class AgentsController < ApplicationController
-  before_action :check_for_premium
+  # before_action :check_for_premium, :except => :index
+  # before_action :check_for_premium, :except => :show
 
   def index #1
     @agents = Agent.all

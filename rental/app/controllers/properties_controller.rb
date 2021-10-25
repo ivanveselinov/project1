@@ -1,5 +1,6 @@
 class PropertiesController < ApplicationController
-  before_action :check_for_login
+  # before_action :check_for_login, :except => :index
+  # before_action :check_for_login, :except => :show
   def index #step 1
     @properties = Property.all
 end
@@ -36,6 +37,6 @@ end
 
 private
 def property_params
-params.require(:property).permit(:adress, :suburb, :postcode, :rooms, :livingrooms, :bathrooms, :toilets, :garage, :pspace, :rent, :photos, :agent_ids => [])
+params.require(:property).permit(:adress, :suburb, :postcode, :rooms, :livingrooms, :bathrooms, :toilets, :garage, :pspace, :rent, :photos, :galery, :bedrooms, :agent_ids => [])
 end
 end

@@ -1,9 +1,11 @@
 <h1>Western Suburb Agents</h1>
 
-<div class="show">
+<div class="index">
 <% @agents.each do |agent| %>
-<%= agent.name %>
-<%= agent.surname %>
+<div class="propertycard">
+<p> <%= agent.name %> <%= agent.surname %></p> 
+
 <%= link_to image_tag(agent.image, :class => 'thumb'), agent %>
+</div>
 <% end %>
 <div>

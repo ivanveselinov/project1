@@ -4,17 +4,17 @@
 <%= image_tag @properties.photos, :class => 'fearture' if @properties.photos.present? %>
 
 <ul>
-  <li>Adress: <%= @properties.adress %></li>
-  <li>Suburb: <%= @properties.suburb %></li>
-  <li>PostCode: <%= @properties.postcode %></li>
-  <li>Rooms: <%= @properties.rooms %></li>
-  <li>Adress: <%= @properties.adress %></li>
-  <li>livingrooms: <%= @properties.livingrooms %></li>
-  <li>bathrooms: <%= @properties.bathrooms %></li>
-  <li>toilets: <%= @properties.toilets %></li>
-  <li>garage: <%= @properties.garage %></li>
-  <li>Parking Space: <%= @properties.pspace %></li>
-  <li>rent: <%= @properties.rent %></li>
+  <li>Adress: <%= @properties.adress %> 🏡</li>
+  <li>Suburb: <%= @properties.suburb %> 🏞</li>
+  <li>PostCode: <%= @properties.postcode %> 📬</li>
+  <li>Rooms: <%= @properties.rooms %> </li>
+  <li>livingrooms: <%= @properties.livingrooms %> 🛋</li>
+  <li>Bedrooms: <%= @properties.bedrooms %> 🛏</li>
+  <li>bathrooms: <%= @properties.bathrooms %> 🛁</li>
+  <li>toilets: <%= @properties.toilets %> 🚽</li>
+  <li>Garage: <%= @properties.garage %> 🍙</li>
+  <li>Parking Space: <%= @properties.pspace %> 🚗</li>
+  <li>Rent: <%= @properties.rent %> 💵 per week</li>
 
   <% @properties.agents.each do |property| %>
   <%= link_to image_tag(property.image, :class => 'thumb'), property %>
@@ -22,8 +22,7 @@
 
 </ul>
 
-<% if @current_user.present? %>
+<% if @current_user.present? && @current_user.admin?%>
 <%= link_to 'Edit Property', edit_property_path %>
 <%= link_to 'Delete Property', @properties, :method => 'delete', :data =>{ :confirm => 'Are you sure?'}  %>
 <% end %>
-</div>

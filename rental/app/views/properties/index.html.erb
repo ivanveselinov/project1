@@ -1,7 +1,9 @@
-<h1>This is Property page</h1>
-<div class="show">
+<h1>Western Sururb Agency</h1>
+<div class="index">
 <% @properties.each do |property| %>
+<div class="propertycard">
 <p><%= property.adress%></p>
 <%= link_to image_tag(property.photos, :class => 'thumb'), property %>
+</div>
 <% end %>
 </div>

@@ -12,7 +12,7 @@ class CreateProperties < ActiveRecord::Migration[5.2]
       t.integer :pspace
       t.integer :rent
       t.text :photos
-
+  
       t.timestamps
     end
   end

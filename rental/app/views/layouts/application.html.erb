@@ -11,14 +11,19 @@
 
   <body>
     <nav>
+
       <% if @current_user.present? %>
       <% if @current_user.admin? %>
       <%= link_to 'Create Agents', new_agent_path %>
       <% end %>
+      <% if @current_user.premium? %>
+      <% end %>
       <%= link_to 'Home', root_path %>
-      <%= link_to 'Insert Property', new_property_path %>
+      <%= link_to 'Create Property', new_property_path %>
       <%= link_to 'Agents', agents_path %>
-      <%= link_to "Log out #{ @current_user.email }", login_path, :method => 'delete' %>
+      <%= link_to 'View Properties', user_path(@current_user) %>
+      <%= link_to 'Edit Profile', edit_user_path(@current_user) %>
+      <%= link_to "Logout: #{ @current_user.email }", login_path, :method => 'delete' %>
       <% else %>
       <%= link_to 'Properties', root_path %>
       <%= link_to 'Agents', agents_path %>

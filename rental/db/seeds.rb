@@ -30,9 +30,9 @@ puts "#{ Agent.count} Agents"
 
 Property.destroy_all
 
-p1 = Property.create(:adress => '97 Moonstone Circuit', :suburb => 'St.Albans', :postcode => 3021, :rooms => 5, :livingrooms => 1, :bathrooms => 1, :toilets => 1, :garage => 1, :pspace => 2, :rent => 350, :photos => 'https://static.dezeen.com/uploads/2020/02/house-in-the-landscape-niko-arcjitect-architecture-residential-russia-houses-khurtin_dezeen_2364_hero.jpg')
+p1 = Property.create(:adress => '97 Moonstone Circuit', :suburb => 'St.Albans', :postcode => 3021, :rooms => 5, :livingrooms => 1, :bedrooms =>1, :bathrooms => 1, :toilets => 1, :garage => 1, :pspace => 2, :rent => 350, :photos => 'https://static.dezeen.com/uploads/2020/02/house-in-the-landscape-niko-arcjitect-architecture-residential-russia-houses-khurtin_dezeen_2364_hero.jpg')
 
-p2 = Property.create(:adress => '12  Circuit', :suburb => 'Carroline springs', :postcode => 3021, :rooms => 5, :livingrooms => 1, :bathrooms => 1, :toilets => 1, :garage => 1, :pspace => 2, :rent =>350, :photos => 'https://static.dezeen.com/uploads/2020/02/house-in-the-landscape-niko-arcjitect-architecture-residential-russia-houses-khurtin_dezeen_2364_hero.jpg')
+p2 = Property.create(:adress => '12  Circuit', :suburb => 'Carroline springs', :postcode => 3021, :rooms => 5, :livingrooms => 1, :bedrooms =>1, :bathrooms => 1, :toilets => 1, :garage => 1, :pspace => 2, :rent =>350, :photos => 'https://static.dezeen.com/uploads/2020/02/house-in-the-landscape-niko-arcjitect-architecture-residential-russia-houses-khurtin_dezeen_2364_hero.jpg')
 
 
 puts "#{ Property.count} Properties"

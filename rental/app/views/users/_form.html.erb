@@ -1,0 +1,17 @@
+
+<h1>Welcome back: <%= @current_user.email %></h1>
+
+<%= form_for @current_user do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.label :surname %>
+<%= f.text_field :surname %>
+<%= f.label :mobile %>
+<%= f.text_field :mobile %>
+<%= f.label :phone %>
+<%= f.text_field :phone %>
+<%= f.label :image %>
+<%= f.url_field :image %>
+
+<%= f.submit %>
+<% end %>

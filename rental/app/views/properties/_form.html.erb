@@ -1,27 +1,59 @@
+<div class="formformat">
 <%= form_for @properties do |f| %>
+<br>
 <%= f.label :adress %>
 <%= f.text_field :adress, :required => true %>
+</br>
+<br>
 <%= f.label :suburb%>
 <%= f.text_field :suburb, :required => true %>
+</br>
+<br>
 <%= f.label :postcode %>
 <%= f.text_field :postcode, :required => true %>
+</br>
+<br>
 <%= f.label :rooms %>
 <%= f.text_field :rooms %>
+</br>
+<br>
 <%= f.label :livingrooms %>
 <%= f.text_field :livingrooms %>
+</br>
+<br>
+<%= f.label :bedrooms %>
+<%= f.text_field :bedrooms %>
+</br>
+<br>
 <%= f.label :bathrooms %>
 <%= f.text_field :bathrooms %>
+</br>
+<br>
 <%= f.label :toilets %>
 <%= f.text_field :toilets %>
+</br>
+<br>
 <%= f.label :garage %>
 <%= f.text_field :garage %>
+</br>
+<br>
 <%= f.label :pspace %>
 <%= f.text_field :pspace %>
+</br>
+<br>
 <%= f.label :rent %>
-<%= f.label :rent %>
+<%= f.text_field :rent %>
+</br>
+<br>
 <%= f.label :photos %>
-<%= f.url_field :photos %>
+<%= f.url_field :photos, :required => true %>
+</br>
+<br>
 <%= f.label :agent_ids %>
 <%= collection_check_boxes :property, :agent_ids, Agent.all, :id, :name %>
+</br>
+<br>
 <%= f.submit %>
+</br>
 <% end %>
+</div>
