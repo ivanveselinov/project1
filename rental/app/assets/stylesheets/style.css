@@ -5,11 +5,12 @@ background-color: grey;
 .container{
   border-radius: 20px;
   padding-left: 10px;
-  /* padding-top: 10px;   <!--- make header and container together!!--> */
+  /* padding-top: 10px;  /*  <!--- make header and container together!!--> */
   max-width: 980px;
   margin: 0 auto;
   min-height: 960px;
   background-color: rgba(255, 255, 255, 0.8);
+  margin-top: 20px;
 }
 .thumb{
   max-width: 9em;
@@ -51,7 +52,7 @@ a{
 
 .index{
 display: flex;
-flex-wrap: wrap;  <!-- THIS ONE MAKES IS RESPONSIVE -->
+flex-wrap: wrap;  /*<!--- THIS ONE MAKES IS RESPONSIVE -->*/
 }
 
 .propertycard{
