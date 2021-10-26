@@ -3,27 +3,27 @@
 
 <%= form_for @agents do |f|  %>
 <br>
-<%= f.label :name %>
+<%= f.label :name, "Name: " %>
 <%= f.text_field :name %>
 </br>
 <br>
-<%= f.label :surname %>
+<%= f.label :surname, "Surname: " %>
 <%= f.text_field :surname %>
 </br>
 <br>
-<%= f.label :mobile %>
+<%= f.label :mobile, "Mobile: " %>
 <%= f.text_field :mobile %>
 </br>
 <br>
-<%= f.label :phone %>
+<%= f.label :phone, "Phone: " %>
 <%= f.text_field :phone %>
 </br>
 <br>
-<%= f.label :email %>
+<%= f.label :email, "Email: " %>
 <%= f.text_field :email %>
 </br>
 <br>
-<%= f.label :image %>
+<%= f.label :image, "Profile Photo: " %>
 <%= f.url_field :image %>
 </br>
 <br>

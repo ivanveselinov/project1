@@ -1,5 +1,6 @@
 body{
-background-color: grey;
+/* background-color: grey; */
+background-image: url("/assets/heaven.jpg");
 }
 
 .container{
@@ -55,6 +56,7 @@ display: flex;
 flex-wrap: wrap;  /*<!--- THIS ONE MAKES IS RESPONSIVE -->*/
 }
 
+
 .propertycard{
 border-radius: 10px;
 border: 1px solid gray;
@@ -75,4 +77,13 @@ li{
 
 .formformat{
   font-size: 22px;
+}
+
+.btnlogin{
+  margin-top: 42px;
+}
+
+.login_text{
+  text-align: center;
+  font-size: 23px;
 }

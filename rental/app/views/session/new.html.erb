@@ -1,12 +1,28 @@
-<div class="login">
+
+
 <h1>Log in</h1>
 <%= form_tag login_path do %>
-<%= label_tag :email %>
-<%= email_field_tag :email %>
 
-<%= label_tag :password %>
-<%= password_field_tag :password %>
 
-<%= submit_tag "Sign in" %>
+<div class="form-group">
+<div class="row">
+
+
+<div class="col-sm login_text">
+<%= label_tag :email, "📩 Email : " %>
+<%= email_field_tag :email,nil , :class => "form-control" %>
+</div>
+
+
+<div class="col-sm login_text">
+<%= label_tag :password, "🔑 Password: " %>
+<%= password_field_tag :password,nil , :class => "form-control" %>
+</div>
+
+<div class="col-sm ">
+<%= submit_tag "Sign in", :class => "btn btn-primary btnlogin" %>
+</div>
+
 <% end %>
+</div>
 </div>

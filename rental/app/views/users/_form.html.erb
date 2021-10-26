@@ -2,16 +2,32 @@
 <h1>Welcome back: <%= @current_user.email %></h1>
 
 <%= form_for @current_user do |f| %>
-<%= f.label :name %>
+<br>
+<%= f.label :name, "Name: "%>
 <%= f.text_field :name %>
-<%= f.label :surname %>
-<%= f.text_field :surname %>
-<%= f.label :mobile %>
-<%= f.text_field :mobile %>
-<%= f.label :phone %>
-<%= f.text_field :phone %>
-<%= f.label :image %>
-<%= f.url_field :image %>
+</br>
 
+<br>
+<%= f.label :surname, "Surname: " %>
+<%= f.text_field :surname %>
+</br>
+
+<br>
+<%= f.label :mobile, "Mobile: " %>
+<%= f.text_field :mobile %>
+</br>
+
+<br>
+<%= f.label :phone, "Phone: " %>
+<%= f.text_field :phone %>
+</br>
+
+<br>
+<%= f.label :image, "Profile Photo: "%>
+<%= f.url_field :image %>
+</br>
+
+<br>
 <%= f.submit %>
+</br>
 <% end %>
