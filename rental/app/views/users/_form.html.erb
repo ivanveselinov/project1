@@ -1,33 +1,41 @@
+<div class="formformat">
 
 <h1>Welcome back: <%= @current_user.email %></h1>
 
 <%= form_for @current_user do |f| %>
-<br>
+<div class="row justify-content-md-center form-group ">
+  <div class="col-5">
+
+<div class=" form-label">
 <%= f.label :name, "Name: "%>
-<%= f.text_field :name %>
-</br>
+<%= f.text_field :name, :class =>'form-control' %>
+</div>
 
-<br>
+<div class=" form-label">
 <%= f.label :surname, "Surname: " %>
-<%= f.text_field :surname %>
-</br>
+<%= f.text_field :surname, :class =>'form-control' %>
+</div>
 
-<br>
+<div class=" form-label">
 <%= f.label :mobile, "Mobile: " %>
-<%= f.text_field :mobile %>
-</br>
+<%= f.text_field :mobile, :class =>'form-control' %>
+</div>
 
-<br>
+<div class=" form-label">
 <%= f.label :phone, "Phone: " %>
-<%= f.text_field :phone %>
-</br>
+<%= f.text_field :phone, :class =>'form-control' %>
+</div>
 
-<br>
+<div class=" form-label">
 <%= f.label :image, "Profile Photo: "%>
-<%= f.url_field :image %>
-</br>
+<%= f.url_field :image, :class =>'form-control' %>
+</div>
 
-<br>
-<%= f.submit %>
-</br>
+<div class="btn_user_edit row mt-5">
+<%= f.submit "Update User", :class => "btn btn-primary " %>
+</div>
+
+</div>
+</div>
 <% end %>
+</div>

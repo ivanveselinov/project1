@@ -37,6 +37,6 @@ end
 
 private
 def property_params
-params.require(:property).permit(:adress, :suburb, :postcode, :rooms, :livingrooms, :bathrooms, :toilets, :garage, :pspace, :rent, :photos, :galery, :bedrooms, :agent_ids => [])
+params.require(:property).permit(:adress, :suburb, :postcode, :rooms, :livingrooms, :bathrooms, :toilets, :garage, :pspace, :rent, :photos, :galery, :bedrooms, :availablitly, :agent_ids => [])
 end
 end

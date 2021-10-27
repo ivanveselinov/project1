@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap');
 body{
 /* background-color: grey; */
 background-image: url("/assets/heaven.jpg");
@@ -19,6 +22,20 @@ background-image: url("/assets/heaven.jpg");
 
 .fearture{
   max-width: 11em;
+}
+
+.fearture-agents{
+    width: 180px;
+    height: 180px;
+    border-radius: 90px;
+    margin: 40px 10px 10px 10px;
+    max-width: 11em;
+}
+
+.fearture-images{
+    border-radius: 20px;
+    margin: 40px 10px 10px 10px;
+    max-width: 11em;
 }
 
 .show{
@@ -47,6 +64,7 @@ a{
 }
 
 .login{
+  margin-bottom:50px;
   text-align: center;
   font-size: 22px;
 }
@@ -64,18 +82,26 @@ padding: 10px;
 margin: 5px;
 text-align: center;
 background-color:white;
+max-height: 160px;
 }
 
 h1{
+  font-family: 'Comfortaa', cursive;
   text-align: center;
 }
 
+p{
+  font-family: 'Kanit', sans-serif;
+}
+
 li{
+  font-family: 'Kanit', sans-serif;
   font-size: 22px;
 
 }
 
 .formformat{
+  font-family: 'Comfortaa', cursive;
   font-size: 22px;
 }
 
@@ -86,4 +112,12 @@ li{
 .login_text{
   text-align: center;
   font-size: 23px;
+}
+
+.btn_user_edit{
+  margin-left:5px;
+}
+
+.show-agents{
+  font-family: 'Comfortaa', cursive;
 }

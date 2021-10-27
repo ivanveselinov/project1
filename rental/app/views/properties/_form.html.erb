@@ -1,60 +1,85 @@
 
 <div class="formformat">
+
+
 <%= form_for @properties do |f| %>
-<br>
+<div class="row justify-content-md-center form-group ">
+  <div class="col-5">
+
+<div class="form-label">
 <%= f.label :adress, "Adress: " %>
-<%= f.text_field :adress, :required => true %>
-</br>
-<br>
+<%= f.text_field :adress, :required => true, :class =>'form-control' %>
+</div>
+
+<div class="form-label">
 <%= f.label :suburb, "Suburb: "%>
-<%= f.text_field :suburb, :required => true %>
-</br>
-<br>
+<%= f.text_field :suburb, :required => true, :class =>'form-control' %>
+</div>
+
+<div class="form-label">
 <%= f.label :postcode, "PostCode: " %>
-<%= f.text_field :postcode, :required => true %>
-</br>
-<br>
+<%= f.text_field :postcode, :required => true, :class =>'form-control' %>
+</div>
+
+<div class="form-label">
 <%= f.label :rooms, "Rooms: " %>
-<%= f.text_field :rooms %>
-</br>
-<br>
+<%= f.text_field :rooms, :class =>'form-control' %>
+</div>
+
+<div class="form-label">
 <%= f.label :livingrooms, "LivingRooms: " %>
-<%= f.text_field :livingrooms %>
-</br>
-<br>
+<%= f.text_field :livingrooms, :class =>'form-control' %>
+</div>
+
+<div class="form-label">
 <%= f.label :bedrooms, "BedRooms: " %>
-<%= f.text_field :bedrooms %>
-</br>
-<br>
+<%= f.text_field :bedrooms, :class =>'form-control' %>
+</div>
+
+<div class="form-label">
 <%= f.label :bathrooms, "BathRooms: " %>
-<%= f.text_field :bathrooms %>
-</br>
-<br>
+<%= f.text_field :bathrooms, :class =>'form-control' %>
+</div>
+
+<div class="form-label">
 <%= f.label :toilets, "Toilets: " %>
-<%= f.text_field :toilets %>
-</br>
-<br>
+<%= f.text_field :toilets, :class =>'form-control' %>
+</div>
+
+<div class="form-label">
 <%= f.label :garage, "Garage: " %>
-<%= f.text_field :garage %>
-</br>
-<br>
+<%= f.text_field :garage, :class =>'form-control' %>
+</div>
+
+<div class="form-label">
 <%= f.label :pspace, "Parking Space: " %>
-<%= f.text_field :pspace %>
-</br>
-<br>
-<%= f.label :rent, "Rent: " %>
-<%= f.text_field :rent %>
-</br>
-<br>
+<%= f.text_field :pspace, :class =>'form-control' %>
+</div>
+
+<div class="form-label">
+<%= f.label :rent, "Rent per Week : " %>
+<%= f.text_field :rent, :class =>'form-control' %>
+</div>
+
+<div class="form-label">
 <%= f.label :photos, "Main Photo: " %>
-<%= f.url_field :photos, :required => true %>
-</br>
+<%= f.url_field :photos, :required => true, :class =>'form-control' %>
+</div>
+
 <br>
+<%= f.label :availablitly, "Available" %>
+<%= f.check_box :availablitly %>
+</br>
+
 <%= f.label :agent_ids, "Real Estate Agents: " %>
 <%= collection_check_boxes :property, :agent_ids, Agent.all, :id, :name %>
-</br>
-<br>
-<%= f.submit %>
-</br>
+
+
+<div class="row mt-2">
+<%= f.submit "Create", :class => "btn btn-primary btn-lg btn-block " %>
+</div>
+
+</div>
+</div>
 <% end %>
 </div>
