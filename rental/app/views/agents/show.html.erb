@@ -3,7 +3,7 @@
 <%= cl_image_tag @agents.image, :class => 'fearture-agents' if @agents.image.present? %>
 <ul>
   <li>📱Mobile Number: <%= @agents.mobile %></li>
-  <li>📞Phone Number: <%= @agents.phone %></li>
+  <li>📞Phone Number: <%= number_to_phone @agents.phone, :area_code => true %></li>
   <li>📩 Email: <%= @agents.email %></li>
 </ul>
 
