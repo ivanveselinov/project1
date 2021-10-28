@@ -4,24 +4,15 @@ class PropertiesController < ApplicationController
     @properties = Property.all
     @search = params[:search]
     if @search.present?
-      # @postcode.@search[:postcode]
-      @properties = Property.all.where(search: "#{@postcode}")
-end
-
-
-#  def search
-#    @search = params[:search]
-#    if @search.present?
-#      # @postcode.@search[:postcode]
-#      @properties = Property.all.where(search: "#{@postcode}")
-# end
+      @properties = Property.all.where(postcode: "#{@search}")
+    end
  end
 
   def show #2
     @properties = Property.find params[:id]
   end
 
-  def new #3 see form on new page
+  def new #3 
     @properties = Property.new
   end
 
