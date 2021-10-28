@@ -2,7 +2,7 @@
 
 <h1>Welcome back: <%= @current_user.email %></h1>
 
-<%= form_for @current_user do |f| %>
+<%= form_for(@current_user, :html => {:multipart => true}) do |f|  %>
 <div class="row justify-content-md-center form-group ">
   <div class="col-5">
 
@@ -26,9 +26,9 @@
 <%= f.text_field :phone, :class =>'form-control' %>
 </div>
 
-<div class=" form-label">
-<%= f.label :image, "Profile Photo: "%>
-<%= f.url_field :image, :class =>'form-control' %>
+<div class="form-label">
+<%= f.label :image, "Profile Photo: " %>
+<%= f.file_field :image %>
 </div>
 
 <div class="btn_user_edit row mt-5">

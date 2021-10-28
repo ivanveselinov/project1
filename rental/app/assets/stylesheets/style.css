@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap');
 body{
-/* background-color: grey; */
 background-image: url("/assets/heaven.jpg");
 }
 
@@ -18,10 +17,14 @@ background-image: url("/assets/heaven.jpg");
 }
 .thumb{
   max-width: 9em;
+  max-height: 6.3em;
 }
 
 .fearture{
+  min-width: 11em;
+  min-height: 6em;
   max-width: 11em;
+  max-height: 6em;
 }
 
 .fearture-agents{
@@ -30,6 +33,9 @@ background-image: url("/assets/heaven.jpg");
     border-radius: 90px;
     margin: 40px 10px 10px 10px;
     max-width: 11em;
+    min-width: 11em;
+    max-width: 11em;
+    min-height: 11em;
 }
 
 .fearture-images{
@@ -83,6 +89,10 @@ margin: 5px;
 text-align: center;
 background-color:white;
 max-height: 160px;
+min-height: 160px;
+min-width: 180px;
+max-width: 180px;
+
 }
 
 h1{
@@ -120,4 +130,32 @@ li{
 
 .show-agents{
   font-family: 'Comfortaa', cursive;
+}
+
+.gallery{
+  max-width: 200px;
+  min-height: 200px;
+  max-height: 160px;
+  min-height: 200px;
+}
+
+.gallerycard{
+border-radius: 10px;
+border: 1px solid gray;
+padding: 5px;
+margin: 5px;
+background-color:white;
+max-height: 160px;
+}
+
+
+.ownerpropertycard{
+  border-radius: 10px;
+  border: 1px solid gray;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+  background-color:white;
+  max-height: 160px;
+
 }

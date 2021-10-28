@@ -1,6 +1,6 @@
 <h1><%= @agents.name %> <%= @agents.surname %></h1>
 
-<%= image_tag @agents.image, :class => 'fearture-agents' if @agents.image.present? %>
+<%= cl_image_tag @agents.image, :class => 'fearture-agents' if @agents.image.present? %>
 <ul>
   <li>📱Mobile Number: <%= @agents.mobile %></li>
   <li>📞Phone Number: <%= @agents.phone %></li>

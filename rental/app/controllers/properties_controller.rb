@@ -1,9 +1,21 @@
 class PropertiesController < ApplicationController
-  # before_action :check_for_login, :except => :index
-  # before_action :check_for_login, :except => :show
+
   def index #step 1
     @properties = Property.all
+    @search = params[:search]
+    if @search.present?
+      # @postcode.@search[:postcode]
+      @properties = Property.all.where(search: "#{@postcode}")
 end
+
+
+#  def search
+#    @search = params[:search]
+#    if @search.present?
+#      # @postcode.@search[:postcode]
+#      @properties = Property.all.where(search: "#{@postcode}")
+# end
+ end
 
   def show #2
     @properties = Property.find params[:id]
@@ -14,29 +26,56 @@ end
   end
 
   def create #4
-    property = Property.create property_params
-    @current_user.properties << property
-    redirect_to root_path
+  property = Property.create property_params
+  @current_user.properties << property
+    if params[:property][:photos].present?
+      req = Cloudinary::Uploader.upload params[:property][:photos]
+      property.photos = req["public_id"]
+      property.save
+    end
+  if params[:property][:images].present?
+      params[:property][:images].each do |image|
+      req = Cloudinary::Uploader.upload image
+      property.images << req["public_id"]
+        property.save
+      end
+      redirect_to root_path
   end
+end
 
   def edit #5
     @properties = Property.find params[:id]
   end
 
-  def update
-    properties = Property.find params[:id]
-    properties.update property_params
-    redirect_to property_path
-  end
+  def update #6
+      properties = Property.find params[:id]
+      properties.update property_params
+      properties.update_attributes property_params
+    if params[:property][:photos].present?
+      req = Cloudinary::Uploader.upload params[:property][:photos]
+      properties.photos = req["public_id"]
+      properties.save
+    end
+    if params[:property][:images].present?
+      properties.images = []
+      params[:property][:images].each do |image|
+      req = Cloudinary::Uploader.upload image
+      properties.images << req["public_id"]
+      properties.save
+    end
 
-  def destroy
+end
+  redirect_to property_path
+end
+
+  def destroy #7
    properties = Property.find params[:id]
    properties.destroy
-   redirect_to root_path
+   redirect_to user_path
   end
 
 private
 def property_params
-params.require(:property).permit(:adress, :suburb, :postcode, :rooms, :livingrooms, :bathrooms, :toilets, :garage, :pspace, :rent, :photos, :galery, :bedrooms, :availablitly, :agent_ids => [])
-end
+params.require(:property).permit(:adress, :suburb, :postcode, :rooms, :livingrooms, :bathrooms, :toilets, :garage, :pspace, :rent, :photos, :bedrooms, :availablitly, :agent_ids => [])
+ end
 end

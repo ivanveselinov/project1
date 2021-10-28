@@ -8,11 +8,11 @@
 
 User.destroy_all
 
-b1 = User.create(:email => 'Ivan@yahoo.com', :password => '123', :name => 'Ivan', :surname => 'Veselinov', :mobile => '415999555', :phone => '4444', :image => 'https://media.istockphoto.com/photos/white-passenger-bus-picture-id135327019?k=20&m=135327019&s=612x612&w=0&h=YJneXYFReSVuKSIFOy5wGIygeLeb1UquX4BWLk-MluI=')
+b1 = User.create(:email => 'guest@ga.com', :password => 'chicken', :name => 'Ivan', :surname => 'none', :mobile => '044555555', :phone => '4444', :image => 'https://media.istockphoto.com/photos/white-passenger-bus-picture-id135327019?k=20&m=135327019&s=612x612&w=0&h=YJneXYFReSVuKSIFOy5wGIygeLeb1UquX4BWLk-MluI=')
 
-b2 = User.create(:email => 'Ivan@ga', :password => '12', :name => 'Ivan', :surname => 'Veselinov', :mobile => '415999555', :phone => '4444', :image => 'https://media.istockphoto.com/photos/white-passenger-bus-picture-id135327019?k=20&m=135327019&s=612x612&w=0&h=YJneXYFReSVuKSIFOy5wGIygeLeb1UquX4BWLk-MluI=')
+b2 = User.create(:email => 'premium@ga.com', :password => 'chicken', :name => 'Mile', :surname => 'Jovkov', :mobile => '415999455', :phone => '0444555444', :image => 'https://media.istockphoto.com/photos/white-passenger-bus-picture-id135327019?k=20&m=135327019&s=612x612&w=0&h=YJneXYFReSVuKSIFOy5wGIygeLeb1UquX4BWLk-MluI=', :premium => true)
 
-b2 = User.create(:email => 'I@ga', :password => '12', :name => 'Ivan', :surname => 'Veselinov', :mobile => '415999555', :phone => '4444', :image => 'https://media.istockphoto.com/photos/white-passenger-bus-picture-id135327019?k=20&m=135327019&s=612x612&w=0&h=YJneXYFReSVuKSIFOy5wGIygeLeb1UquX4BWLk-MluI=', :admin => true)
+b3 = User.create(:email => 'I@ga.com', :password => 'chicken', :name => 'Ivan', :surname => 'Veselinov', :mobile => '415999655', :phone => '0444555444', :image => 'https://media.istockphoto.com/photos/white-passenger-bus-picture-id135327019?k=20&m=135327019&s=612x612&w=0&h=YJneXYFReSVuKSIFOy5wGIygeLeb1UquX4BWLk-MluI=', :admin => true)
 
 puts "#{User.count} Users"
 

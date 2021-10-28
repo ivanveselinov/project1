@@ -1,7 +1,8 @@
 
 <h1>Welcome to: <%= @properties.adress %></h1>
-
-<%= image_tag @properties.photos, :class => 'fearture-images' if @properties.photos.present? %>
+<div class="row">
+  <div class="col-6">
+<%= cl_image_tag @properties.photos, :class => 'fearture-images' if @properties.photos.present? %>
 
 <ul>
   <li>🏡 Adress: <%= @properties.adress %></li>
@@ -18,11 +19,16 @@
   <li> <input type="checkbox" name="availability" <%= "checked" if @properties.availablitly %> disabled data-toggle="toggle" data-on="Available" data-off="Not Available" data-onstyle="success" data-offstyle="danger"></li>
 
   <% @properties.agents.each do |property| %>
-    <%= link_to image_tag(property.image, :class => 'fearture-agents'), property %>
+    <%= link_to cl_image_tag(property.image, :class => 'fearture-agents'), property %>
   <% end %>
-
 </ul>
+</div>
 
+<div class="col-6">
+<% @properties.images.each do |image| %>
+<%= cl_image_tag image, :class => 'gallerycard gallery' %>
+<% end %>
+</div>
 <% if @current_user.present? &&  @current_user.admin? %>
 
   <%= link_to 'Edit Property', edit_property_path %>
@@ -36,3 +42,4 @@
 <%= link_to 'Edit Property', edit_property_path %>
 <%= link_to 'Delete Property', @properties, :method => 'delete', :data =>{ :confirm => 'Are you sure?'}  %>
 <% end %>
+</div>

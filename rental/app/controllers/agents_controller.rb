@@ -16,18 +16,29 @@ class AgentsController < ApplicationController
 
   def create #4
     agent = Agent.create agent_params
+    if params[:agent][:image].present?
+    req = Cloudinary::Uploader.upload params[:agent][:image]
+    agent.image = req["public_id"]
+    agent.save
+      end
     redirect_to root_path
-  end
+end
 
   def edit #5
     @agents = Agent.find params[:id]
   end
 
+
   def update #6
     agents = Agent.find params[:id]
     agents.update agent_params
+    if params[:agent][:image].present?
+    req = Cloudinary::Uploader.upload params[:agent][:image]
+    agents.image = req["public_id"]
+    agents.save
+end
     redirect_to agent_path
-  end
+end
 
   def destroy #7
     agents = Agent.find params[:id]

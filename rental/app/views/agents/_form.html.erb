@@ -1,7 +1,7 @@
 <div class="formformat">
 
 
-<%= form_for @agents do |f|  %>
+<%= form_for(@agents, :html => {:multipart => true}) do |f|  %>
 <div class="row justify-content-md-center form-group ">
   <div class="col-5">
 
@@ -35,9 +35,8 @@
 
 <div class="row form-label">
 <%= f.label :image, "Profile Photo: " %>
-<%= f.url_field :image, :required => true, :class =>'form-control' %>
+<%= f.file_field :image %>
 </div>
-
 
 
 <div class="row mt-5">

@@ -62,18 +62,24 @@
 </div>
 
 <div class="form-label">
-<%= f.label :photos, "Main Photo: " %>
-<%= f.url_field :photos, :required => true, :class =>'form-control' %>
+<%= f.label :photos, "House profile photo: " %>
+<%= f.file_field :photos %>
+</div>
+
+<div class="form-label">
+<%= f.label "Gallery :" %>
+<%= f.file_field :images, :multiple => true %>
 </div>
 
 <br>
-<%= f.label :availablitly, "Available" %>
+<%= f.label :availablitly, "Is House Available:" %>
 <%= f.check_box :availablitly %>
 </br>
 
 <%= f.label :agent_ids, "Real Estate Agents: " %>
+<br>
 <%= collection_check_boxes :property, :agent_ids, Agent.all, :id, :name %>
-
+</br>
 
 <div class="row mt-2">
 <%= f.submit "Create", :class => "btn btn-primary btn-lg btn-block " %>
