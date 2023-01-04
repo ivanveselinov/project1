@@ -1,6 +1,6 @@
 databases:
   - name: rental_development
-    ipAlloList: []
+    ipAllowList: []
 
 services:
   - type: web
@@ -17,6 +17,6 @@ services:
           property: connectionString
   - type: redis
     name: redis
-    ipAlloList: []
+    ipAllowList: []
     plan: free
     maxmemoryPolicy: noeviction
