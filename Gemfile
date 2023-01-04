@@ -29,6 +29,7 @@ gem 'bcrypt', '~> 3.1.7'
 # Missing deployment gem
 gem 'nokogiri', '1.13.10'
 
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
