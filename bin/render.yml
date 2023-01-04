@@ -1,0 +1,24 @@
+databases:
+  - name: rentalsivan
+    databaseName: rentals
+    user: mysite
+
+services:
+  - type: web
+    name: mysite
+    env: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: bundle exec rails s
+    envVars:
+      - key: RAILS_MASTER_KEY
+        sync: false
+      - key: DATABASE_URL
+        fromDatabase:
+          name: Postgresql
+          property: connectionString
+  - type: redis
+    name: redis
+    ipAlloList: []
+    plan: free
+    maxmemoryPolicy: noeviction
+    
